@@ -6,6 +6,7 @@ Dê uma olhadinha caso queira. :3
 ## Não esquece como rodar o projeto com a VUE.js:
 
 npm install
+
 npm run dev
 
 
