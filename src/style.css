@@ -1,0 +1,248 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffb3d9;
+  margin: 0;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.title .pink {
+  color: #ff4da6;
+}
+
+.title .dex {
+  color: white;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#search {
+  padding: 10px 14px;
+  width: 220px;
+  max-width: 100%;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* GRID */
+#pokedex {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 35px;
+  padding: 49px;
+  justify-items: center;
+}
+
+/* CARD */
+.card {
+  width: 180px;
+  min-height: 230px;
+  background: #ffffffbf;
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #ff4da633;
+  box-shadow: 0 8px 20px #00000026;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.card h3 {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #e64980;
+  text-transform: capitalize;
+}
+
+.card img {
+  width: 80px;
+  margin: 10px auto;
+}
+
+/* TIPOS */
+.type {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  margin: 3px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* CORES */
+.fire { background: #ff6b6b; color: white; }
+.water { background: #4dabf7; color: white; }
+.grass { background: #51cf66; color: white; }
+.electric { background: #ffd43b; color: black; }
+.normal { background: #adb5bd; color: white; }
+.ground { background: #d2b48c; color: white; }
+.fighting { background: #c44d4d; color: white; }
+.steel { background: #a8a8c0; color: white; }
+.flying { background: #a0c4ff; color: black; }
+.bug { background: #9acd32; color: black; }
+.poison { background: #a040a0; color: white; }
+.rock { background: #b8a038; color: white; }
+.dark { background: #5a5a5a; color: white; }
+.psychic { background: #ff6fa1; color: white; }
+.fairy { background: #ffb6c1; color: black; }
+.ghost { background: #705898; color: white; }
+.dragon { background: #7038f8; color: white; }
+.ice { background: #98d8d8; color: black; }
+
+/* MODAL */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #ff4da662;
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 25px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px #fff9f970;
+}
+
+.modal-types {
+  margin: 10px 0;
+}
+
+.modal-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+  font-size: 14px;
+  color: white;
+}
+
+.modal-info div {
+  background: #ee72b0;
+  padding: 10px;
+  border-radius: 15px;
+  min-width: 80px;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ff4da6, #ff80bf);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 22px;
+  color: #ffffff;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px #0000001a;
+}
+
+.modal-content p {
+  margin: 5px 0 0;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.modal-info strong {
+  display: block;
+  font-size: 13px;
+  color: #830b35;
+  margin-bottom: 4px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .title {
+    width: 100%;
+    font-size: 28px;
+  }
+
+  #search {
+    width: 100%;
+  }
+}
+
+.favorite-name {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #d8d8d8;
+  border: 2px solid #ff4da6;
+  color: white;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.back-btn {
+  align-self: flex-start;
+  margin-left: 40px;
+  margin-bottom: 20px;
+
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #ff4da6, #ff80bf);
+  color: white;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 77, 166, 0.4);
+}
